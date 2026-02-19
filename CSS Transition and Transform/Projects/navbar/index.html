@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        html,body{
+            height: 100%;
+            background-color: rgb(195, 225, 137);
+        }
+
+        nav{
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+            background-color:rgba(245, 245, 245, 0.379);
+
+            padding: 10px 20px;
+        }
+
+        nav ul{
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            font-size: 1.3vw;
+        }
+
+        nav ul li{
+            cursor: pointer;
+            position: relative;
+
+            /* background-color: red; */
+
+            /* padding-bottom: 10px; */
+            overflow: hidden;
+        }
+
+
+        nav ul li::after{
+            content: '';
+            height: 2px;
+            width: 100%;
+            background-color: black;
+            position: absolute;
+            
+            bottom: 0px;
+            left: -100%;
+
+            /* transition: all ; */
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+
+        }
+
+        nav ul li:hover::after{
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>Logo</h1>
+
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Work</li>
+            <li>Contact</li>
+        </ul>
+
+        <div id="nav-btns">
+            <button>Sing in</button>
+            <button>Sign up</button>
+        </div>
+    </nav>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        #main {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: gray;
+        }
+
+        button{
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+
+            transition-property: background-color;
+            transition-duration: 0.5s;
+            position: relative;
+            
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        button::after{
+            content: '';
+            height: 100%;
+            width: 100%;
+            background-color: crimson;
+            position: absolute;
+            
+            top: 0;
+            left: -100%;
+            border-radius: 6px;
+            
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+            z-index: -1;
+        }
+        
+        button:hover::after{
+            /* background-color: brown; */
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="main">
+        <button>Hover Me</button>
+    </div>
+
+
+</body>
+
+</html>
