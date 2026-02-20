@@ -22,12 +22,15 @@
             height: 100%;
             width: 100%;
             background-color: rgb(178, 140, 140);
+            position: relative;
         }
 
         .box {
             height: 150px;
             width: 150px;
             background-color: blueviolet;
+
+            position: absolute;
 
             animation-name: box-anime;
             animation-duration: 5s;
@@ -36,6 +39,7 @@
 
         }
 
+        /*
         @keyframes box-anime {
 
             0% {
@@ -63,6 +67,34 @@
             100% {
 
                 transform: translate(0px, 0px);
+            }
+        }
+       */
+
+        @keyframes box-anime {
+            0% {
+                top: 0;
+                left: 0;
+            }
+
+            25% {
+                top: 0;
+                left: 1380px;
+            }
+
+            50% {
+                top: 540px;
+                left: 1380px;
+            }
+
+            75% {
+                left: 0;
+                top: 540px;
+            }
+
+            100% {
+                left: 0;
+                top: 0;
             }
         }
     </style>
