@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #87CEEB, #E0F6FF);
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            text-align: center;
+            background: rgba(255,255,255,0.8);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            margin-bottom: 50px;
+            color: #333;
+        }
+        
+        .ball {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            background: radial-gradient(circle at 30% 30%, #fff, #e67e22);
+            border-radius: 50%;
+            animation: bounce 1s ease-in infinite;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .shadow {
+            width: 60px;
+            height: 15px;
+            margin: 20px auto 0;
+            background: rgba(0,0,0,0.2);
+            border-radius: 50%;
+            animation: shadow 1s ease-in infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-200px);
+            }
+        }
+        
+        @keyframes shadow {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(0.5);
+                opacity: 0.1;
+            }
+        }
+        
+        .note {
+            margin-top: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bouncing Ball</h2>
+        <div class="ball"></div>
+        <div class="shadow"></div>
+        <p class="note">Watch the shadow shrink as ball rises!</p>
+    </div>
+</body>
+</html>

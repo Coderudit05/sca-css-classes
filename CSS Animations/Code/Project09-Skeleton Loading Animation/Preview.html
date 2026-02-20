@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeleton Loading Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 400px;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            color: #333;
+            text-align: center;
+        }
+
+        .skeleton-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .skeleton-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .skeleton-avatar {
+            width: 60px;
+            height: 60px;
+            background: #eee;
+            border-radius: 50%;
+            margin-right: 15px;
+            animation: shimmer 1.5s infinite;
+        }
+
+        .skeleton-title {
+            flex: 1;
+            height: 20px;
+            background: #eee;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            animation: shimmer 1.5s infinite;
+        }
+
+        .skeleton-subtitle {
+            flex: 0.7;
+            height: 15px;
+            background: #eee;
+            border-radius: 8px;
+            animation: shimmer 1.5s infinite;
+            animation-delay: 0.2s;
+        }
+
+        .skeleton-image {
+            width: 100%;
+            height: 200px;
+            background: #eee;
+            border-radius: 12px;
+            margin: 20px 0;
+            animation: shimmer 1.5s infinite;
+            animation-delay: 0.3s;
+        }
+
+        .skeleton-lines {
+            margin: 20px 0;
+        }
+
+        .skeleton-line {
+            height: 15px;
+            background: #eee;
+            border-radius: 8px;
+            margin: 10px 0;
+            animation: shimmer 1.5s infinite;
+        }
+
+        .skeleton-line:nth-child(1) {
+            width: 100%;
+            animation-delay: 0.1s;
+        }
+
+        .skeleton-line:nth-child(2) {
+            width: 95%;
+            animation-delay: 0.2s;
+        }
+
+        .skeleton-line:nth-child(3) {
+            width: 90%;
+            animation-delay: 0.3s;
+        }
+
+        .skeleton-line:nth-child(4) {
+            width: 85%;
+            animation-delay: 0.4s;
+        }
+
+        .skeleton-footer {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .skeleton-button {
+            flex: 1;
+            height: 45px;
+            background: #eee;
+            border-radius: 25px;
+            animation: shimmer 1.5s infinite;
+        }
+
+        .skeleton-button:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .skeleton-button:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background: #eee;
+            }
+
+            50% {
+                background: #ddd;
+            }
+
+            100% {
+                background: #eee;
+            }
+        }
+
+        .note {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #4CAF50;
+            color: white;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Skeleton Loading</h2>
+        <div class="skeleton-card">
+            <div class="skeleton-header">
+                <div class="skeleton-avatar"></div>
+                <div style="flex: 1;">
+                    <div class="skeleton-title"></div>
+                    <div class="skeleton-subtitle"></div>
+                </div>
+            </div>
+
+            <div class="skeleton-image"></div>
+
+            <div class="skeleton-lines">
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+            </div>
+
+            <div class="skeleton-footer">
+                <div class="skeleton-button"></div>
+                <div class="skeleton-button"></div>
+            </div>
+        </div>
+        <p class="note">Modern UI loading pattern • <span class="badge">Real content loads here</span></p>
+    </div>
+</body>
+
+</html>

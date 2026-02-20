@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .main {
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+
+            animation-name: box-color-change;
+            animation-duration: 6s;
+            animation-delay: 2s;
+            animation-iteration-count: 1;
+
+        }
+
+        /* Animations */
+
+        /* @keyframes box-color-change {
+            from{
+                background-color: red;
+            }            
+            to{
+                background-color: yellow;
+            }
+        } */
+
+
+        @keyframes box-color-change {
+            0% {
+                background-color: yellow;
+            }
+
+            25% {
+
+                background-color: red;
+            }
+
+            50% {
+
+                background-color: pink;
+            }
+
+            75% {
+
+                background-color: burlywood;
+            }
+
+            100% {
+
+                background-color: brown;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main"></div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-color: gray;
+        }
+
+        .main {
+            height: 300px;
+            width: 300px;
+            background-color: yellow;
+
+            animation: move-box 6s 1;
+            animation-timing-function: linear;
+        }
+
+        @keyframes move-box {
+
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(80vw, 0);
+
+            }
+
+            50% {
+                transform: translate(80vw, 50vh);
+
+            }
+
+            75% {
+                transform: translate(0vw, 50vh);
+
+            }
+
+            100% {
+                transform: translate(0vw, 0vh);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main"></div>
+</body>
+
+</html>

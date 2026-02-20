@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .main{
+            height: 100%;
+            width: 100%;
+            background-color: rgb(205, 178, 178);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .card{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+
+            animation-name: box-color-anime;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        @keyframes box-color-anime {
+
+            from{
+                background-color: aqua;
+            }
+            to{
+                background-color: brown;
+            }
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="card"></div>
+    </div>
+
+</body>
+
+</html>
