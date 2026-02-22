@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .main {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .card {
+            height: 500px;
+            width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .bubble-container {
+            /* background-color: white; */
+            height: 80%;
+            width: 100%;
+            margin-top: 12%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            padding: 10px 20px;
+        }
+
+        .bubble {
+            height: 100px;
+            width: 100px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+
+            transform: translateY(150px);
+
+            animation-name: bubble-anime;
+            animation-duration: 10s;
+        }
+
+        .bubble:nth-child(1) {
+            animation-name: bubble-anime;
+            animation-duration: 10s;
+        }
+
+        .bubble:nth-child(2) {
+            animation-name: bubble-anime;
+            animation-duration: 10s;
+            animation-delay: 0.2s;
+        }
+
+        .bubble:nth-child(3) {
+            animation-name: bubble-anime;
+            animation-duration: 10s;
+            animation-delay: 0.4s;
+        }
+
+        .bubble:nth-child() {
+            animation-name: bubble-anime;
+            animation-duration: 10s;
+            animation-delay: 0.8s;
+        }
+
+
+        @keyframes bubble-anime {
+            0% {
+                transform: translateY(150px);
+            }
+
+            20% {
+                transform: translate(40px, 10px);
+            }
+
+            30% {
+                transform: translate(60px, 100px);
+
+            }
+
+            50% {
+                transform: translate(100px, -300px);
+
+            }
+
+            70% {
+                transform: translate(0px, -500px);
+            }
+
+            /* 85%{
+                
+            } */
+            100% {
+                transform: translate(0px, -700px);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="card">
+            <h1>Floating Bubbles</h1>
+
+            <div class="bubble-container">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
