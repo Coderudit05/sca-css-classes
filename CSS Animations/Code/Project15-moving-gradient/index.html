@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+        }
+
+        .gradient-box {
+            width: 400px;
+            height: 200px;
+            border-radius: 20px;
+
+            background: linear-gradient(45deg,
+                    #ff416c,
+                    #ff4b2b,
+                    #f9d423,
+                    #24c6dc,
+                    #514a9d);
+
+            background-size: 400% 400%;
+            animation: gradientMove 6s infinite linear;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="gradient-box"></div>
+
+</body>
+
+</html>

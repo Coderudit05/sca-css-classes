@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+}
+
+.glow-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+
+    color: white;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+
+    transition: all 0.3s ease;
+}
+
+.glow-btn:hover {
+    transform: scale(1.1);
+
+    box-shadow:
+        0 0 10px #ff416c,
+        0 0 20px #ff416c,
+        0 0 40px #ff4b2b,
+        0 0 60px #ff4b2b;
+}
+
+</style>
+</head>
+<body>
+
+<button class="glow-btn">Hover Me</button>
+
+</body>
+</html>
