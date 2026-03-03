@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f5f5;
+        }
 
-body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f5f5f5;
-}
+        .loader {
+            display: flex;
+            gap: 15px;
+        }
 
-.loader {
-    display: flex;
-    gap: 15px;
-}
+        .dot {
+            width: 20px;
+            height: 20px;
+            background: #3498db;
+            border-radius: 50%;
+            animation: jump 0.6s infinite ease-in-out;
+        }
 
-.dot {
-    width: 20px;
-    height: 20px;
-    background: #3498db;
-    border-radius: 50%;
-    animation: jump 0.6s infinite ease-in-out;
-}
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
 
-.dot:nth-child(2) {
-    animation-delay: 0.2s;
-}
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
 
-.dot:nth-child(3) {
-    animation-delay: 0.4s;
-}
+        @keyframes jump {
+            0% {
+                transform: translateY(0);
+            }
 
-@keyframes jump {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-25px); }
-    100% { transform: translateY(0); }
-}
+            50% {
+                transform: translateY(-25px);
+            }
 
-</style>
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="loader">
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-</div>
+    <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
 
 </body>
+
 </html>

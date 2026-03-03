@@ -17,52 +17,121 @@
         body {
             height: 100%;
         }
-        
+
         .main {
             height: 100%;
-            background-color: rgb(107, 104, 104);
+            /* background-color: rgb(107, 104, 104); */
             display: flex;
             align-items: center;
-            justify-content: center;            
+            justify-content: center;
         }
 
         .testimonials {
             height: 300px;
             width: 80%;
-            background-color: greenyellow;
-
+            /* background-color: greenyellow; */
             overflow: hidden;
 
             display: flex;
             align-items: center;
+            position: relative;
+            z-index: -1;
         }
 
-        .track{
-            background-color: violet;
+        .testimonials::before {
+            content: '';
+            height: 100%;
+            width: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            background: linear-gradient(to left, transparent, white);
+            z-index: 1;
+
+        }
+
+        .testimonials::after {
+            content: '';
+            height: 100%;
+            width: 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            background: linear-gradient(to right, transparent, white);
+            z-index: 1;
+
+        }
+
+        .track {
+            /* background-color: violet; */
 
             display: flex;
             gap: 20px;
 
-            animation: scroll 5s linear infinite;
+            animation: scroll 10s linear infinite;
 
         }
-        
-        .testimonial{
-            height: 200px;
-            width: 300px;
-            background-color: yellowgreen;
+
+        .testimonial {
+            height: 260px;
+            width: 320px;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 1.5px 4px rgba(0, 0, 0, 0.10);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 24px 18px 18px 18px;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18), 0 3px 8px rgba(0, 0, 0, 0.14);
+        }
+
+        .testimonial-img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 12px;
+            border: 3px solid #a3e635;
+        }
+
+        .testimonial-name {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        .testimonial-role {
+            font-size: 0.95rem;
+            color: #7c7c7c;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            color: #444;
+            text-align: center;
+            line-height: 1.5;
         }
 
         @keyframes scroll {
-            0%{
+            0% {
                 transform: translateX(0%);
             }
-            100%{
+
+            100% {
                 transform: translateX(-50%);
             }
         }
-
-
     </style>
 </head>
 
@@ -71,16 +140,75 @@
     <div class="main">
         <div class="testimonials">
             <div class="track">
-                <div class="testimonial"></div>
-                <div class="testimonial"></div>
-                <div class="testimonial"></div>
-                <div class="testimonial"></div>
-                <div class="testimonial"></div>
-                <div class="testimonial"></div>
-                <div class="testimonial"></div>
-                <div class="testimonial"></div>
-                <div class="testimonial"></div>
-                <div class="testimonial"></div>
+                <div class="testimonial">
+                    <img class="testimonial-img" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile">
+                    <div class="testimonial-name">Priya Sharma</div>
+                    <div class="testimonial-role">Designer</div>
+                    <div class="testimonial-text">“The animation effects are stunning and make our website stand out.
+                        Highly recommended!”</div>
+                </div>
+                <div class="testimonial">
+                    <img class="testimonial-img" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile">
+                    <div class="testimonial-name">Rahul Verma</div>
+                    <div class="testimonial-role">Frontend Developer</div>
+                    <div class="testimonial-text">“Easy to implement and customize. The UI looks modern and
+                        professional.”</div>
+                </div>
+                <div class="testimonial">
+                    <img class="testimonial-img" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Profile">
+                    <div class="testimonial-name">Aditi Singh</div>
+                    <div class="testimonial-role">Product Manager</div>
+                    <div class="testimonial-text">“Our users love the new look! The testimonial cards are a great
+                        addition.”</div>
+                </div>
+                <div class="testimonial">
+                    <img class="testimonial-img" src="https://randomuser.me/api/portraits/men/15.jpg" alt="Profile">
+                    <div class="testimonial-name">Vikram Patel</div>
+                    <div class="testimonial-role">UI/UX Expert</div>
+                    <div class="testimonial-text">“Beautiful, responsive, and smooth animations. Perfect for any
+                        project.”</div>
+                </div>
+                <div class="testimonial">
+                    <img class="testimonial-img" src="https://randomuser.me/api/portraits/women/21.jpg" alt="Profile">
+                    <div class="testimonial-name">Sneha Joshi</div>
+                    <div class="testimonial-role">Developer</div>
+                    <div class="testimonial-text">“The cards look amazing and the scrolling effect is very engaging!”
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img class="testimonial-img" src="https://randomuser.me/api/portraits/men/41.jpg" alt="Profile">
+                    <div class="testimonial-name">Aman Gupta</div>
+                    <div class="testimonial-role">Engineer</div>
+                    <div class="testimonial-text">“Great work! The testimonials section is now the highlight of our
+                        site.”</div>
+                </div>
+                <div class="testimonial">
+                    <img class="testimonial-img" src="https://randomuser.me/api/portraits/women/55.jpg" alt="Profile">
+                    <div class="testimonial-name">Meera Nair</div>
+                    <div class="testimonial-role">Content Writer</div>
+                    <div class="testimonial-text">“I love the clean design and the subtle hover effect on each card.”
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img class="testimonial-img" src="https://randomuser.me/api/portraits/men/23.jpg" alt="Profile">
+                    <div class="testimonial-name">Siddharth Rao</div>
+                    <div class="testimonial-role">Marketer</div>
+                    <div class="testimonial-text">“The new testimonial cards have improved our brand image!”</div>
+                </div>
+                <div class="testimonial">
+                    <img class="testimonial-img" src="https://randomuser.me/api/portraits/women/36.jpg" alt="Profile">
+                    <div class="testimonial-name">Riya Kapoor</div>
+                    <div class="testimonial-role">HR Manager</div>
+                    <div class="testimonial-text">“Very impressive! The cards are visually appealing and easy to read.”
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img class="testimonial-img" src="https://randomuser.me/api/portraits/men/52.jpg" alt="Profile">
+                    <div class="testimonial-name">Karan Mehta</div>
+                    <div class="testimonial-role">Business Analyst</div>
+                    <div class="testimonial-text">“The scrolling animation and card design are top-notch. Well done!”
+                    </div>
+                </div>
             </div>
         </div>
     </div>
