@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .testimonial-section{
+            background-color: green;
+            height: 100vh;
+            padding: 20px 40px;
+
+        }
+
+        h1{
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        p{
+            text-align: center;
+            /* background-color: pink; */
+            width: 500px;
+            margin: 10px auto;
+        }
+
+        .testimonials{
+            background-color: violet;
+            height: 350px;
+            margin: 80px auto;
+
+            display: flex;
+            align-items: center;
+
+            /* overflow-x: auto; */
+            overflow: hidden;
+        }
+
+        .testimonials::-webkit-scrollbar{
+            display: none;
+        }
+
+        .slider{
+            background-color: brown;
+
+            display: flex;
+
+            gap: 20px;
+            
+            animation: scroll 10s linear infinite;
+        }
+
+        .testimonials:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-50%);
+            }
+        }
+
+        .testimonial{
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="testimonial-section">
+        <h1>What Our Students Say</h1>
+        <p>Real feedback from learners who improved their frontend skills through practical projects and hands-on CSS
+            animation concepts.
+        </p>
+
+        <div class="testimonials">
+
+            <div class="slider">
+                <div class="testimonial"></div>
+                <div class="testimonial"></div>
+                <div class="testimonial"></div>
+                <div class="testimonial"></div>
+                <div class="testimonial"></div>
+                <div class="testimonial"></div>
+                <div class="testimonial"></div>
+                <div class="testimonial"></div>
+                <div class="testimonial"></div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
