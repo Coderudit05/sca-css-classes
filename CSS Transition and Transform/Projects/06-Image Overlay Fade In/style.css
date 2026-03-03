@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+/* Overlay container */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+
+    /* Start hidden */
+    transform: translateY(100%);
+    opacity: 0;
+
+    /* Smooth animation */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Hover effect */
+.card:hover .overlay {
+    transform: translateY(0);
+    opacity: 1;
+}

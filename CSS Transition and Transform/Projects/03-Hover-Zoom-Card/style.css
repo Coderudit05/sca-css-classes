@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    width: 300px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+    /* Smooth animation setup */
+    transition: transform 0.4s ease,box-shadow 0.4s ease;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    /* Zoom effect */
+    transform: scale(1.05);
+
+    /* Shadow enhancement */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
