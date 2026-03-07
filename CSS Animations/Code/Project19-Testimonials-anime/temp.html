@@ -37,17 +37,47 @@
             align-items: center;
             overflow: hidden;
             /* overflow-x: auto; */
+
+            position: relative;
+            z-index: 1;
         }
 
-        .testimonials::-webkit-scrollbar {}
+        .testimonials::before{
+            content: "";
+            height: 100%;
+            width: 100px;
+            background: linear-gradient(to right,white,transparent);
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+        }
+        .testimonials::after{
+            content: "";
+            height: 100%;
+            width: 100px;
+            background: linear-gradient(to right,transparent,white);
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+        }
 
         .slider {
             background-color: red;
 
             display: flex;
             gap: 20px;
+            z-index: -1;           
 
             animation: slider-anime 10s linear infinite;
+        }
+
+        .slider:hover{
+            animation-play-state: paused;
         }
 
         @keyframes slider-anime {
