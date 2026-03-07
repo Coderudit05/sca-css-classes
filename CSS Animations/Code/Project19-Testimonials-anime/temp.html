@@ -18,71 +18,54 @@
             height: 100%;
         }
 
-        .testimonial-section{
-            background-color: rgb(181, 217, 181);
+        .testimonial-section {
             height: 100vh;
             padding: 20px 40px;
-
-        }
-
-        h1{
-            text-align: center;
-            margin: 50px auto;
-        }
-
-        p{
-            text-align: center;
-            /* background-color: pink; */
-            width: 500px;
-            margin: 10px auto;
-        }
-
-        .testimonials{
-            background-color: violet;
-            height: 350px;
-            margin: 80px auto;
+            background-color: rgb(181, 217, 181);
 
             display: flex;
             align-items: center;
-
-            /* overflow-x: auto; */
-            overflow: hidden;
+            justify-content: center;
         }
 
-        .testimonials::-webkit-scrollbar{
-            display: none;
-        }
-
-        .slider{
-            background-color: brown;
+        .testimonials {
+            background-color: violet;
+            width: 90%;
+            height: 350px;
 
             display: flex;
+            align-items: center;
+            overflow: hidden;
+            /* overflow-x: auto; */
+        }
 
+        .testimonials::-webkit-scrollbar {}
+
+        .slider {
+            background-color: red;
+
+            display: flex;
             gap: 20px;
-            
-            animation: scroll 10s linear infinite;
+
+            animation: slider-anime 10s linear infinite;
         }
 
-        .testimonials:hover{
-            animation-play-state: paused;
-        }
-
-        @keyframes scroll {
-
+        @keyframes slider-anime {
             0%{
                 transform: translateX(0);
             }
             100%{
                 transform: translateX(-50%);
+                
             }
         }
 
-        .testimonial{
+
+
+        .testimonial {
             height: 300px;
             width: 300px;
-            background-color: blue;
-
-            border: 1px solid white;
+            background-color: yellowgreen;
         }
     </style>
 </head>
@@ -90,11 +73,6 @@
 <body>
 
     <section class="testimonial-section">
-        <h1>What Our Students Say</h1>
-        <p>Real feedback from learners who improved their frontend skills through practical projects and hands-on CSS
-            animation concepts.
-        </p>
-
         <div class="testimonials">
             <div class="slider">
                 <div class="testimonial"></div>
@@ -105,11 +83,10 @@
                 <div class="testimonial"></div>
                 <div class="testimonial"></div>
                 <div class="testimonial"></div>
-                <div class="testimonial"></div>
+               
             </div>
         </div>
     </section>
-
 </body>
 
 </html>
