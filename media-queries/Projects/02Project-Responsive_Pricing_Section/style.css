@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.pricing {
+  padding: 30px;
+  background: #f4f6f8;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.pricing-header h1 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.subtitle {
+  color: gray;
+  max-width: 600px;
+  margin: auto;
+}
+
+.toggle-buttons{
+    background-color: rgb(240, 175, 175);
+    margin: 20px auto;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 30px;
+    
+}
+
+.toggle-buttons button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.toggle-buttons button:nth-child(1){
+    background-color: indianred;
+    color: white;
+}
+.toggle-buttons button:nth-child(2){
+    background-color: transparent;
+}
+
+.pricing-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 60px;
+    /* background-color: yellowgreen; */
+}
+
+.pricing-container .card{
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px 24px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    position: relative;
+}
+
+.pricing-container .card h3{
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.pricing-container .card .card-subtitle{
+    color: gray;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.pricing-container .card h2{
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.pricing-container .card h2 span{
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+}
+
+.pricing-container .card button{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.pricing-container .card ul{
+    list-style: none;
+    text-align: left;
+}
+
+.pricing-container .card ul li{
+    padding: 4px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.pricing-container .card ul li i{
+    color: #2ecc71;
+    margin-right: 8px;
+}
+
+/* Popular card */
+.pricing-container .card.popular{
+    background: #1e293b;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.pricing-container .card.popular .card-subtitle{
+    color: #aab;
+}
+
+.pricing-container .card.popular h2 span{
+    color: #aab;
+}
+
+.pricing-container .card.popular button{
+    background: #2ecc71;
+    color: #fff;
+    border: none;
+}
+
+.pricing-container .card.popular ul li{
+    color: #ccc;
+}
+
+.pricing-container .card.popular .badge{
+    background: #374a60;
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@media (max-width:1050px) {
+
+    .pricing-container{
+        flex-wrap: wrap;
+    }
+}

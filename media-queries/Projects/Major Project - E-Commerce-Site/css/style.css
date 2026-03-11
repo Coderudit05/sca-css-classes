@@ -1,0 +1,582 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+
+    position: fixed;
+    width: 100%;
+    
+    z-index: 1;
+
+    background-color: #999;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.input {
+    background-color: rgb(222, 216, 216);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.input input {
+    width: 400px;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+.input input:focus {
+    outline: none;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+/* Hero Section */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 20px;
+
+    overflow: hidden;
+    padding: 60px;
+}
+
+.hero .hero-text {}
+
+.hero-text h1 {
+    font-size: 70px;
+    font: bold;
+    margin-top: 50px;
+}
+
+.hero-text p {
+    color: rgba(0, 0, 0, 0.491);
+    padding: 20px 0px;
+}
+
+.hero-image {
+    /* background-color: yellowgreen; */
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    height: 600px;
+}
+
+.hero button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.status {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.status span {
+    font-size: 40px;
+}
+
+.status P {}
+
+.status div {
+    position: relative;
+    padding: 0px 20px;
+}
+
+.status div:nth-child(2)::before {
+    content: "";
+    height: 80%;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.249);;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.status div:nth-child(2)::after {
+    content: "";
+    height: 80%;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.249);
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+/* Brands Section */
+.brands{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+.brands span{
+    font-size: 30px;
+}
+
+
+/* CSS for the new section : new arrivals and top selling products*/
+
+.new-arrivals{
+padding:80px 60px;
+background:#f6f6f6;
+}
+
+
+/* Section Title */
+
+.section-title{
+text-align:center;
+font-size:38px;
+font-weight:800;
+margin-bottom:50px;
+letter-spacing:1px;
+}
+
+
+/* Product Container */
+
+.products{
+display:flex;
+justify-content:space-between;
+gap:30px;
+flex-wrap:wrap;
+}
+
+
+/* Product Card */
+
+.product-card{
+width:23%;
+background:white;
+padding:20px;
+border-radius:12px;
+transition:0.3s;
+cursor:pointer;
+}
+
+
+/* Hover Effect */
+
+.product-card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 25px rgba(0,0,0,0.1);
+}
+
+
+/* Product Image Box */
+
+.img{
+background:#f2f2f2;
+padding:30px;
+border-radius:10px;
+text-align:center;
+margin-bottom:15px;
+}
+
+
+/* Product Image */
+
+.img img{
+width:100%;
+max-width:180px;
+object-fit:contain;
+}
+
+
+/* Product Title */
+
+.product-card h3{
+font-size:16px;
+font-weight:600;
+margin-bottom:10px;
+color:#111;
+}
+
+
+/* Rating Section */
+
+.rating{
+display:flex;
+align-items:center;
+gap:8px;
+margin-bottom:10px;
+}
+
+
+/* Stars */
+
+.stars{
+color:#f5a623;
+font-size:14px;
+}
+
+
+/* Rating Value */
+
+.rating-value{
+font-size:14px;
+color:#777;
+}
+
+
+/* Price Section */
+
+.price{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+
+/* Current Price */
+
+.current{
+font-size:18px;
+font-weight:700;
+color:#000;
+}
+
+
+/* Old Price */
+
+.old{
+text-decoration:line-through;
+color:#999;
+font-size:15px;
+}
+
+
+/* Discount Badge */
+
+.discount{
+background:#ffe6e6;
+color:red;
+padding:4px 8px;
+border-radius:12px;
+font-size:12px;
+font-weight:600;
+}
+
+
+
+/* ---------------- */
+/* Responsive Design */
+/* ---------------- */
+
+
+/* Tablet */
+
+@media (max-width:900px){
+
+.products{
+justify-content:center;
+}
+
+.product-card{
+width:45%;
+}
+
+}
+
+
+/* Mobile */
+
+@media (max-width:500px){
+
+.new-arrivals{
+padding:60px 20px;
+}
+
+.section-title{
+font-size:28px;
+}
+
+.product-card{
+width:100%;
+}
+
+}
+
+
+
+.view-all{
+text-align:center;
+margin-top:40px;
+}
+
+.view-btn{
+padding:12px 40px;
+border-radius:25px;
+border:1px solid #ddd;
+background:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.view-btn:hover{
+background:black;
+color:white;
+border-color:black;
+}
+
+
+/* Testimonials section */
+
+.testimonials{
+padding:80px 60px;
+background:#f8f8f8;
+}
+
+/* Heading */
+
+.section-title{
+text-align:center;
+font-size:38px;
+font-weight:800;
+margin-bottom:50px;
+}
+
+
+/* Container */
+
+.testimonial-container{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+
+/* Card */
+
+.testimonial-card{
+background:white;
+padding:30px;
+border-radius:12px;
+width:30%;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+
+/* Hover */
+
+.testimonial-card:hover{
+transform:translateY(-5px);
+}
+
+
+/* Stars */
+
+.stars{
+color:#f5a623;
+font-size:18px;
+margin-bottom:10px;
+}
+
+
+/* Customer */
+
+.customer{
+font-weight:700;
+margin-bottom:10px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+
+/* Verified icon */
+
+.customer img{
+    height: 20px;
+    width: 20px;
+}
+
+
+/* Review */
+
+.review{
+color:#666;
+font-size:14px;
+line-height:1.6;
+}
+
+
+/* Footer section */
+
+.newsletter{
+background:#f5f5f5;
+padding:80px 60px;
+}
+
+.newsletter-container{
+background:black;
+color:white;
+border-radius:18px;
+padding:40px 60px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:40px;
+}
+
+.newsletter-text h2{
+font-size:36px;
+max-width:500px;
+}
+
+.newsletter-form{
+display:flex;
+flex-direction:column;
+gap:15px;
+width:350px;
+}
+
+.input-box input{
+padding:14px;
+border-radius:25px;
+border:none;
+outline:none;
+width:100%;
+}
+
+.subscribe-btn{
+padding:14px;
+border-radius:25px;
+border:none;
+background:white;
+cursor:pointer;
+font-weight:600;
+}
+
+.footer{
+background:#f5f5f5;
+padding:60px;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:40px;
+}
+
+.footer-col{
+width:180px;
+}
+
+.brand{
+max-width:250px;
+}
+
+.brand h2{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.brand p{
+color:#666;
+margin-bottom:20px;
+}
+
+.footer-col h4{
+margin-bottom:15px;
+font-size:14px;
+letter-spacing:1px;
+}
+
+.footer-col ul{
+list-style:none;
+}
+
+.footer-col ul li{
+margin-bottom:10px;
+color:#666;
+cursor:pointer;
+}
+
+.footer-col ul li:hover{
+color:black;
+}
+
+.social-icons{
+display:flex;
+gap:12px;
+font-size:18px;
+}
+
+.footer-bottom{
+border-top:1px solid #ddd;
+margin-top:40px;
+padding-top:20px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.payments{
+    display: flex;
+    gap: 20px;
+}
+
+.payments img{
+    height: 30px;
+    width: auto;
+    
+}
