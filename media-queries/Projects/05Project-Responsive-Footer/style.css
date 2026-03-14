@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f3f4f6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Footer */
+
+footer {
+    margin-top: auto;
+    padding: 60px 20px;
+}
+
+/* Container */
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 60px;
+    background: white;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Columns */
+
+.column {
+    flex: 1;
+}
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.logo span {
+    background: #334155;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Text */
+
+.column p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Badge */
+
+.highlight {
+    background: #e7f7ec;
+    color: #15803d;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 10px;
+}
+
+.highlight span {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+}
+
+.highlight p {
+    margin: 0;
+}
+
+/* Lists */
+
+ul {
+    list-style: none;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+ul li {
+    margin: 10px 0;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Social Icons */
+
+.links {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.links i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.links i:hover {
+    background: #f1f1f1;
+}
+
+/* ======================
+   TABLET RESPONSIVE
+   ====================== */
+
+@media (max-width:900px) {
+
+    .footer-container {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .column {
+        flex: 45%;
+    }
+
+}
+
+/* ======================
+   MOBILE RESPONSIVE
+   ====================== */
+
+@media (max-width:600px) {
+
+    .footer-container {
+        flex-direction: column;
+        padding: 35px;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+}
