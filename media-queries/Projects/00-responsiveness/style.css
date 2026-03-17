@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+.img-gallery{
+
+    min-height: 100vh;
+    background-color: aquamarine;
+    
+    padding: 20px;
+
+    display: flex;
+    gap: 20px;
+    /* align-items: center; */
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.img-gallery .box{
+    height: 200px;
+    width: 300px;
+    background-color: blueviolet;
+
+    border: 1px solid white;
+
+
+    flex-shrink: 0;
+}
