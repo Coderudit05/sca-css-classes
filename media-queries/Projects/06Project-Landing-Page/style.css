@@ -12,7 +12,8 @@ html,body{
 
 header{
     /* background-color: aquamarine; */
-
+    /* background-color: blue; */
+    
 }
 
 header nav{
@@ -23,8 +24,9 @@ header nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    
     padding: 15px 20px;
+    height: 80px;
 }
 
 .logo-box{
@@ -61,4 +63,103 @@ nav .nav-button{
     font-size: 16px;
     border: none;
     cursor: pointer;
+}
+
+
+.hero-section{
+    display: flex;
+    /* background-color: aquamarine; */
+    min-height: calc(100vh - 80px)
+
+
+}
+
+.hero-section .left,.hero-section .right{
+    width: 50%;
+    /* border: 1px solid black; */
+}
+
+.hero-section .left{
+    /* background-color: yellowgreen; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+
+    padding: 0px 100px;
+    gap: 25px;
+
+}
+.left h2{
+    font-size: 50px;
+    text-align: left;
+    max-width: 500px;
+    /* background-color: blue; */
+}
+
+.left h2 span{
+    color: #e7550c;
+}
+.left p{
+    max-width: 500px;
+    text-align: left;
+}
+.left button{
+    width: fit-content;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #e7550c;
+    color: white;
+    font-size: 16px;
+}
+
+
+/* this is the right part of the hero section */
+.hero-section .right img{
+    height: 600px;
+    width: 700px;
+    object-fit: cover;
+}
+
+
+/* from here we are going to start services section*/
+
+.services{
+    min-height: 100vh;
+    /* background-color:rgba(128, 128, 128, 0.425); */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.services h2{
+    font-size: 50px;
+}
+
+.services h2 span{
+    color: #e7550c;
+}
+
+.services p{
+    max-width: 500px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.614);
+    font-size: 20px;
+}
+
+.services .boxes{
+    display: flex;
+    gap: 40px;
+    padding: 20px 0px;
+}
+
+.services .boxes .box{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
 }
