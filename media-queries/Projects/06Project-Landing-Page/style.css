@@ -244,3 +244,79 @@ nav .nav-button{
     color:#e7550c;
     font-size: 16px;
 }
+
+
+/* From here we are going to start making testimonial section */
+
+.testimonials{
+    height: 50vh;
+    background-color: yellowgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    
+}
+
+.slider{
+    display: flex;
+    background-color: aquamarine;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.testimonial{
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+
+    flex-shrink: 0;
+
+    animation: slider 10s linear infinite;
+}
+
+@keyframes slider {
+    0%{
+        transform: translateX(0);
+    }   
+    
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+/* From here we are going to start footer  */
+
+footer{
+    height: 50vh;
+    /* background-color: azure; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    margin-top: 50px;
+    
+    padding-top: 30px;
+
+}
+
+footer .footer-items{
+    background-color: #fbece6;
+    width: 90%;
+    height: 40vh;
+
+}
+
+footer::before{
+    content: '';
+    height: 100px;
+    width: 70%;
+    background-color: #e7550c;
+
+    position: absolute;
+
+    top: 0;
+}
